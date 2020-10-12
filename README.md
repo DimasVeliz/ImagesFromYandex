@@ -7,6 +7,7 @@ I cloned and added another functionality so it can also search for similar pictu
 
 ## (1)Example (1):
 `$ python3 yandex_images_download.py Chrome -k "dog" -isd "0" --limit 10`
+or
 `$ python3 yandex_images_download.py Chrome --keyword "dog" --image-same-directory "0" --limit 10`
 This will open the browswer and search for the 'dog' keyword. From the image section it will grab the pictures that YandexEngine found and then download the ammount you specified with the --limit flag
 
@@ -15,6 +16,7 @@ This will open the browswer and search for the 'dog' keyword. From the image sec
 
 ## (2)Example (2):
 `$ python3 yandex_images_download.py Chrome -k "0" -isd "1" --limit 10`
+or
 `$ python3 yandex_images_download.py Chrome --keyword "0" --image-same-directory "1" --limit 10`
 
 Executing this command will take all the pictures within the 'putYourImagesHere' folder and will open the browswer and search for similar images. From the image section it will grab the pictures that YandexEngine found and then download the ammount you specified with the --limit flag
