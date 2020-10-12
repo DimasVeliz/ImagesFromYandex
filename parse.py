@@ -19,7 +19,12 @@ def parse_args():
                         type=str,
                         default=None)
 
-        
+    parser.add_argument("-q",
+                        "--quiet-mode",
+                        default=False,
+                        help="do not logging.info() messages",
+                        action="store_true")
+                        
     input_group.add_argument(
         "-k",
         "--keywords",
@@ -35,17 +40,13 @@ def parse_args():
                              type=str,
                              default=None)
     
-    parser.add_argument("-isd",
+    input_group.add_argument("-isd",
                         "--image-same-directory",
                         help=("instruction to get image like download results"),
                         type=str,
                         default=None)
     
-    parser.add_argument("-q",
-                        "--quiet-mode",
-                        default=False,
-                        help="do not logging.info() messages",
-                        action="store_true")
+    
 
     input_group.add_argument("-x",
                              "--single-image",

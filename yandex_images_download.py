@@ -13,30 +13,26 @@ def scrap(args):
     keywords = []
     criteria=False
 
-    if args.image_same_directory=='0' and args.keywords=='0':
-        raise Exception(f"Only one of the image-same directory or keywords flag should be used")        
+    #flagsShortened
+    isd=args.image_same_directory
+    kw=args.keywords
+    kwf=args.keywords_from_file
 
-    if args.image_same_directory:
-        if args.image_same_directory=='0':
-            if args.keywords:
-                 keywords.extend([
+    if isd:
+        criteria=True
+        keywords.extend(
+            [ item for item in os.listdir("./putYourImagesHere") ]
+        )
+    elif kw:
+        keywords.extend([
                     str(item).strip() for item in args.keywords.split(",") if len(item)
                 ])
-            else:
-                raise Exception(f"Only one of the image-same directory or keywords flag should be used")
-
-        elif args.image_same_directory=='1':
-            if args.keywords!='0':
-                raise Exception(f"Only one of the image-same directory or keywords flag should be used")
-            else:
-                criteria=True
-                keywords.extend(
-                    [ item for item in os.listdir("./putYourImagesHere") ]
-                )
-        else:
-            raise Exception(f"The image-same directory flag should ONLY be 0 or 1")
-
-
+    elif kwf:
+        with open(args.keywords_from_file, "r") as f:
+                keywords.extend([line.strip() for line in f])
+    else:
+        raise Exception(f"Only one of the input flags should be used")     
+            
     
    
     driver = get_driver(args.browser, args.driver_path)
