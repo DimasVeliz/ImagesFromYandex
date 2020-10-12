@@ -1,4 +1,4 @@
-# Download Images From Yandex
+# Download Images From Yandex using Python
 These scripts here presented were a clone of the repository: https://github.com/bobokvsky/yandex-images-download.git 
 
 I cloned and added another functionality so it can also search for similar pictures given one or more images as input. So go ahead and thank them as well!
