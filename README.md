@@ -6,7 +6,7 @@ I cloned and added another functionality so it can also search for similar pictu
 # How to use it:
 
 ## (0)Example (0)-passing a textfile in the same directory that contains a list of objects:
-`$ python3 yandex_images_download.py Chrome -kf "dog" --limit 10`
+`$ python3 yandex_images_download.py Chrome -kf "objectsToSearch.txt" --limit 10`
                        
                         **or**
 
