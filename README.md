@@ -14,7 +14,7 @@ I cloned and added another functionality so it can also search for similar pictu
 
 This will open the browswer and search for all the words within the specified file. From the image section it will grab the pictures that YandexEngine found and then download the ammount you specified with the --limit flag
 
-*notice that the flag -isd is set to 0(cero)*
+
 
 
 ## (1)Example (1)-passing one or more keywords sepated with a comma:
@@ -26,7 +26,7 @@ This will open the browswer and search for all the words within the specified fi
 
 This will open the browswer and search for the 'dog' keyword. From the image section it will grab the pictures that YandexEngine found and then download the ammount you specified with the --limit flag
 
-*notice that the flag -isd is set to 0(cero)*
+
 
 
 ## (2)Example (2)- passing one or more images:
@@ -38,7 +38,7 @@ This will open the browswer and search for the 'dog' keyword. From the image sec
 
 Executing this command will take all the pictures within the 'putYourImagesHere' folder and will open the browswer and search for similar images. From the image section it will grab the pictures that YandexEngine found and then download the ammount you specified with the --limit flag
 
-*notice that the flag -k is set to 0(cero)*
+
 
 This was the part I added myself and worked in.
 
