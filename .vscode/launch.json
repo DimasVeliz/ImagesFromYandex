@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["Chrome", "-kf","objectsToSearch.txt" ,"--limit" ,"5"]
+            "args": ["Chrome", "-isd","1" ,"--limit" ,"5"]
         }
     ]
 }
